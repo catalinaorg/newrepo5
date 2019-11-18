@@ -3,3 +3,13 @@ dist: bionic
 sudo: required
 script:
 - bash test.sh
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: VrKPcX3BCc/2UW+jF4zKZ8bIk9ykHY+mOLtw0Xj1iu7Yg5orJfnpAilXHaiu/ykeMTa2SoGVwQFP304ZB24wG5GRWe3z2lPwVp1VagUaUFGYbqfnf6RtEnL/wHJgKaxte8MZBgIpBmqWFI91azmZicEq7uo8mVp6O9eeg/6DtkpouwOdilBXj/98gLYAzgAWphK5hYs7GBxN45ooDreqJRgpx9S6+EeQ2rB3Lajtvgwxp9/cgA5/KXCQYfGHd5F8XZYl7PYHTW5hm2qNEm3SPyNsfz3mMqvXvYUP2Sn75hutUOj+09W8MBHEbNAiRwK28SmhUPDYMmIisA0/BtEAdH+Gn9JgfeTJkz0J1NeJt+af5p4v5tgi0zX6+Fz8WyGBgMWYO8hjWKh9wISmzT8FftzC+8OttKVNNmHGH5Gnp26A2e8KPfszm5UJkgcxBAWsKG/gp40fdzMC8ZDiEsLG/FveyPIX7/gDcK1iy1HexYBc03Jqeh8ijGTRluz81hPzA8ax5XysR+agu7tSXUVDVOqd+8a4B0ICdWRu+Vo9SPCm3sTYjPwn/QP21lFY/MQOyDg1/v1yAmxNzjud4JFzUMRUbLISO2m/uTLaKSdFFy1rA9G6ReitxtRc761iYqsTNu7VNIwXxMIgiOXjgLT0dT+TkIePiK/3H7bAgHXXcew=
+  file: hello.sh
+  on:
+    repo: catalinaorg/newrepo5
+    tags: true
+
